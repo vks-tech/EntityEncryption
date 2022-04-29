@@ -2,7 +2,7 @@
 
 ## Data Flow 
 
-<img src="https://raw.githubusercontent.com/vipul-kumar-singh/EntityEncryption/master/src/main/resources/static/EncryptionDemo.jpg" title="AES Data Flow">
+<img src="https://raw.githubusercontent.com/vks-tech/EntityEncryption/master/src/main/resources/static/EncryptionDemo.jpg" title="AES Data Flow">
 
 
 ## Tutorial
