@@ -10,6 +10,14 @@ import java.util.List;
 @Repository
 public interface CardDetailRepository extends JpaRepository<CardDetail, Integer> {
 
-    @Query(value = "select * from card_detail c where c.card_holder_name = ?1", nativeQuery = true)
-    List<CardDetail> runQuery(String name);
+    // query using JPA methods
+    List<CardDetail> findByCardHolderName(String cardHolderName);
+
+    // query using JPQL
+    @Query("select c from CardDetail c where c.cardHolderName = ?1")
+    List<CardDetail> findUsingJpql(String name);
+
+    // query using native queries
+    @Query(value = "select * from card_detail where card_holder_name = ?1", nativeQuery = true)
+    List<CardDetail> findUsingNativeQuery(String name);
 }

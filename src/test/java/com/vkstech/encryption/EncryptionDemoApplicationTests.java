@@ -70,9 +70,10 @@ class EncryptionDemoApplicationTests {
     }
 
     @Test
-    void retrieveDataJpql() {
-        CardDetail cardDetail = cardDetailRepository.runQuery(aesEncryptor.convertToDatabaseColumn("Tom")).get(0);
-        System.out.println(cardDetail);
+    public void listData(){
+        List<CardDetail> cardDetails = cardDetailRepository
+                .findUsingNativeQuery(aesEncryptor.convertToDatabaseColumn("Tom"));
+        System.out.println(cardDetails.get(0));
     }
 
 }
